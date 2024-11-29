@@ -1,0 +1,260 @@
+//out: ../css/page-5.css
+
+@import "./utils/_variables.less";
+@import "./utils/_mixins.less";
+@import "./utils/_general.less";
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    .hover-scale(@hover-scale);
+  
+    &-img {
+      max-width: 150px;
+      margin-right: 10px;
+      .hover-scale(@hover-scale);
+  
+      @media (min-width: 1900px) {
+        max-width: 200px;
+      }
+  
+      @media (max-width: 800px) {
+        max-width: 100px;
+      }
+    }
+  
+    &-header {
+      font-size: 35px;
+      font-weight: 800;
+      margin-bottom: 10px;
+  
+      @media (min-width: 1900px) {
+        font-size: 45px;
+      }
+    }
+  
+    &-slogan {
+      font-size: 14px;
+  
+      @media (min-width: 1900px) {
+        font-size: 18px;
+      }
+  
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+
+  .info-cards {
+    display: flex;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  .info-card {
+    display: flex;
+    background-color: @primary-color;
+    color: @secondary-bg-color;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      .box-shadow(0px 0px 40px rgba(255, 255, 255, 0.7));
+    }
+  
+    .card-img {
+      max-width: 150px;
+      margin-right: 10px;
+      .hover-scale(@hover-scale);
+  
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+  
+    .card-header {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+  
+      @media (min-width: 1900px) {
+        font-size: 30px;
+      }
+    }
+  
+    .card-description {
+      font-size: 14px;
+  
+      @media (min-width: 1900px) {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  .subscribe {
+    display: flex;
+    justify-content: space-between;
+    background-color: @primary-color;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    min-width: 500px;
+  
+    @media (max-width: 800px) {
+      min-width: 0;
+      max-width: 250px;
+    }
+  
+    .email-input {
+      color: @secondary-bg-color;
+  
+      &:focus {
+        caret-color: @secondary-bg-color;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+
+      @media (min-width: 1900px) {
+        font-size: 18px;
+      }
+  
+      @media (max-width: 800px) {
+        font-size: 12px;
+        max-width: 50%;
+      }
+    }
+  
+    .confirm-btn {
+      background-color: @secondary-bg-color;
+      padding: 10px 30px;
+      border-radius: 20px;
+      transition: all 0.4s ease;
+  
+      &:hover {
+        transform: scale(1.55);
+      }
+  
+      @media (min-width: 1900px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      min-width: 0;
+      max-width: 250px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.info-card + .info-card {
+  margin-left: 20px;
+
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.footer {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 50px;
+  margin-bottom: 10px;
+
+  @media (max-width: 800px) {
+    justify-content: space-between;
+  }
+
+  ul {
+    li + li {
+      margin-top: 10px;
+    }
+  }
+
+  .info-links, .social-links {
+    display: flex;
+    flex-direction: column;
+
+    .info-link, .social-link-text {
+      color: @primary-color;
+      position: relative;
+      text-decoration: none;
+      .under-line();
+
+      @media (min-width: 1900px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 800px) {
+        font-size: 10px;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+
+    .social-icon {
+      max-width: 25px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @media (min-width: 1900px) {
+        max-width: 30px;
+      }
+    }
+  }
+}

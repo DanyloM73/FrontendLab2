@@ -1,0 +1,312 @@
+body {
+  font-family: "SUSE", sans-serif;
+  font-weight: 400;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 16px;
+  background-color: #123566;
+  color: #fff;
+}
+@media (min-width: 1900px) {
+  body {
+    max-width: 1470px;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    max-width: 870px;
+  }
+}
+.box {
+  background-color: #00023D;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 1 auto;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.main .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.main .logo:hover {
+  transform: scale(1.05);
+}
+.main .logo-img {
+  max-width: 150px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+.main .logo-img:hover {
+  transform: scale(1.05);
+}
+@media (min-width: 1900px) {
+  .main .logo-img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 800px) {
+  .main .logo-img {
+    max-width: 100px;
+  }
+}
+.main .logo-header {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+@media (min-width: 1900px) {
+  .main .logo-header {
+    font-size: 45px;
+  }
+}
+.main .logo-slogan {
+  font-size: 14px;
+}
+@media (min-width: 1900px) {
+  .main .logo-slogan {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .main .logo-slogan {
+    display: none;
+  }
+}
+.main .info-cards {
+  display: flex;
+}
+@media (max-width: 1200px) {
+  .main .info-cards {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.main .info-card {
+  display: flex;
+  background-color: #fff;
+  color: #00023D;
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.main .info-card:hover {
+  -webkit-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+}
+.main .info-card .card-img {
+  max-width: 150px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+.main .info-card .card-img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 800px) {
+  .main .info-card .card-img {
+    display: none;
+  }
+}
+.main .info-card .card-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media (min-width: 1900px) {
+  .main .info-card .card-header {
+    font-size: 30px;
+  }
+}
+.main .info-card .card-description {
+  font-size: 14px;
+}
+@media (min-width: 1900px) {
+  .main .info-card .card-description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .main .info-card {
+    text-align: center;
+  }
+}
+.main .subscribe {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 30px;
+  min-width: 500px;
+}
+@media (max-width: 800px) {
+  .main .subscribe {
+    min-width: 0;
+    max-width: 250px;
+  }
+}
+.main .subscribe .email-input {
+  color: #00023D;
+}
+.main .subscribe .email-input:focus {
+  caret-color: #00023D;
+}
+.main .subscribe .email-input:focus::placeholder {
+  color: transparent;
+}
+@media (min-width: 1900px) {
+  .main .subscribe .email-input {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .main .subscribe .email-input {
+    font-size: 12px;
+    max-width: 50%;
+  }
+}
+.main .subscribe .confirm-btn {
+  background-color: #00023D;
+  padding: 10px 30px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+.main .subscribe .confirm-btn:hover {
+  transform: scale(1.55);
+}
+@media (min-width: 1900px) {
+  .main .subscribe .confirm-btn {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .main .subscribe .confirm-btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
+  .main .subscribe {
+    min-width: 0;
+    max-width: 250px;
+  }
+}
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.info-card + .info-card {
+  margin-left: 20px;
+}
+@media (max-width: 1200px) {
+  .info-card + .info-card {
+    margin: 0;
+  }
+}
+.footer {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 50px;
+  margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .footer {
+    justify-content: space-between;
+  }
+}
+.footer ul li + li {
+  margin-top: 10px;
+}
+.footer .info-links,
+.footer .social-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer .info-links .info-link,
+.footer .social-links .info-link,
+.footer .info-links .social-link-text,
+.footer .social-links .social-link-text {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+.footer .info-links .info-link::after,
+.footer .social-links .info-link::after,
+.footer .info-links .social-link-text::after,
+.footer .social-links .social-link-text::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: all 0.2s ease;
+}
+@media (min-width: 1900px) {
+  .footer .info-links .info-link,
+  .footer .social-links .info-link,
+  .footer .info-links .social-link-text,
+  .footer .social-links .social-link-text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .footer .info-links .info-link,
+  .footer .social-links .info-link,
+  .footer .info-links .social-link-text,
+  .footer .social-links .social-link-text {
+    font-size: 10px;
+  }
+}
+.footer .info-links .info-link:hover::after,
+.footer .social-links .info-link:hover::after,
+.footer .info-links .social-link-text:hover::after,
+.footer .social-links .social-link-text:hover::after {
+  transform: scaleX(1);
+}
+.footer .social-link {
+  display: flex;
+  align-items: center;
+}
+.footer .social-link .social-icon {
+  max-width: 25px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+.footer .social-link .social-icon:hover {
+  transform: scale(1.2);
+}
+@media (min-width: 1900px) {
+  .footer .social-link .social-icon {
+    max-width: 30px;
+  }
+}
