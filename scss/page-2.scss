@@ -11,10 +11,6 @@
   margin-top: 10px;
   margin-bottom: 30px;
 
-  @media (max-width: 860px) {
-    flex-direction: column;
-  }
-
   .logo {
     display: flex;
     align-items: center;
@@ -97,6 +93,10 @@
     @media (max-width: 860px) {
       margin-bottom: 20px;
     }
+  }
+
+  @media (max-width: 860px) {
+    flex-direction: column;
   }
 }
 
